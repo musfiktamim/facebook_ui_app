@@ -14,9 +14,26 @@ class Storybox extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.grey.withOpacity(0.3),
           borderRadius: BorderRadius.circular(10),
+          image: DecorationImage(
+            image: AssetImage("assets\\images\\image_1.png"),
+            fit: BoxFit.cover,
+          ),
         ),
         child: Stack(
-          children: [],
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                width: 40,
+                height: 40,
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.grey.withOpacity(0.6)),
+                  borderRadius: BorderRadius.circular(100),
+                ),
+                child: Icon(Icons.person),
+              ),
+            )
+          ],
         ),
       ),
     );
